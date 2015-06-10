@@ -10,6 +10,7 @@ Url:		https://github.com/rthomsen/kcmsystemd
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{oname}/%{oname}-%{version}.tar.xz
 Patch0:		kcmsystemd-1.1.0-kdesu-path.patch
 Patch1:		kcmsystemd-1.1.0-systemd-journal.patch
+Patch2:		kcmsystemd-1.1.0-desktop-localization.patch
 BuildRequires:	extra-cmake-modules
 BuildRequires:	boost-devel
 BuildRequires:	kf5auth-devel
@@ -39,6 +40,7 @@ Plasma 5 systemd control module.
 %setup -qn kcmsystemd-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %cmake_kde5
