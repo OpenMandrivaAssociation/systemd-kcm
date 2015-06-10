@@ -27,7 +27,6 @@ Plasma 5 systemd control module.
 
 %files -f kcmsystemd.lang
 %{_kde5_services}/kcm_systemd.desktop
-%{_kde5_services}/settings-system-administration.desktop
 %{_kde5_libexecdir}/kauth/kcmsystemdhelper
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmsystemd.service
 %{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmsystemd.policy
@@ -47,6 +46,9 @@ Plasma 5 systemd control module.
 
 %install
 %makeinstall_std -C build
+
+# We ship it in plasma5-systemsettings package
+rm -rf %{buildroot}%{_kde5_services}/settings-system-administration.desktop
 
 %find_lang kcmsystemd
 
