@@ -26,7 +26,7 @@ Provides:	kcmsystemd = 0.8.0
 %description
 Plasma 5 systemd control module.
 
-%files -f kcmsystemd.lang
+%files -f systemd-kcm.lang
 %{_kde5_services}/kcm_systemd.desktop
 %{_kde5_services}/settings-system-administration.desktop
 %{_kde5_libexecdir}/kauth/kcmsystemdhelper
@@ -48,5 +48,5 @@ Plasma 5 systemd control module.
 %install
 %ninja_install -C build
 
-%find_lang kcmsystemd
+%find_lang systemd-kcm
 
