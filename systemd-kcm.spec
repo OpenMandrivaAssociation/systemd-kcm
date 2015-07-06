@@ -1,21 +1,20 @@
-%define oname systemd-kcm
-
 Summary:	Plasma 5 systemd control module
-Name:		plasma5-%{oname}
-Version:	1.1.0
+Name:		systemd-kcm
+Version:	1.2.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://github.com/rthomsen/kcmsystemd
-Source0:	ftp://ftp.kde.org/pub/kde/stable/%{oname}/%{oname}-%{version}.tar.xz
-Patch0:		kcmsystemd-1.1.0-systemd-journal.patch
+Source0:	http://download.kde.org/stable/%{name}/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	boost-devel
 BuildRequires:	cmake(KF5Auth)
 BuildRequires:	cmake(KF5ConfigWidgets)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5I18n)
-BuildRequires:	pkgconfig(libsystemd-journal)
+BuildRequires:	cmake(KF5Service)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	pkgconfig(libsystemd)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5DBus)
 BuildRequires:	pkgconfig(Qt5Widgets)
@@ -37,8 +36,7 @@ Plasma 5 systemd control module.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -qn kcmsystemd-%{version}
-%patch0 -p1
+%setup -q
 %cmake_kde5
 
 %build
