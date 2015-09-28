@@ -1,7 +1,7 @@
 Summary:	Plasma 5 systemd control module
 Name:		systemd-kcm
-Version:	1.2.0
-Release:	3
+Version:	1.2.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://github.com/rthomsen/kcmsystemd
