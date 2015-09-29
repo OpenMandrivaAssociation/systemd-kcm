@@ -6,7 +6,6 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://github.com/rthomsen/kcmsystemd
 Source0:	http://download.kde.org/stable/%{name}/%{name}-%{version}.tar.xz
-Patch0:		systemd-kcm-1.2.0-add-libsystemd-journal-link.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	boost-devel
 BuildRequires:	cmake(KF5Auth)
@@ -39,7 +38,6 @@ Plasma 5 systemd control module.
 
 %prep
 %setup -q
-%apply_patches
 %cmake_kde5
 
 %build
