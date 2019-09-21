@@ -34,7 +34,7 @@ Plasma 5 systemd control module.
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmsystemd.service
 %{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmsystemd.policy
 %{_qt5_plugindir}/kcm_systemd.so
-%{_sysconfdir}/dbus-1/system.d/org.kde.kcontrol.kcmsystemd.conf
+%{_datadir}/dbus-1/system.d/org.kde.kcontrol.kcmsystemd.conf
 
 #----------------------------------------------------------------------------
 
